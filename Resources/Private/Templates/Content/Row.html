@@ -1,0 +1,67 @@
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+<f:layout name="Content" />
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+<f:section name="Configuration">
+	{v:variable.typoscript(path: 'plugin.tx_contentfce.settings') -> v:variable.set(name: 'settings')}
+	{f:if(condition: settings.gridColumns, then: settings.gridColumns, else: 12) -> v:variable.set(name: 'numberOfColumns')}
+	<flux:form wizardTab="Dita content element" id="row" icon="{v:extension.path.resources(path: 'Icons/icon-row.gif')}">
+
+		<flux:form.sheet name="rowconfiguration">
+			<flux:field.checkbox name="settings.fluid" />
+		</flux:form.sheet>
+		
+		<flux:form.sheet name="display">
+			<flux:form.section name="columns">
+				<flux:form.object name="column">
+					<flux:field.select name="class" items="{f:render(section: 'Value', arguments: {iteration: iteration})
+						-> v:iterator.loop(count: numberOfColumns, iteration: 'iteration', minimum: 1)}" label="Columns: numberOfColumns" />
+					<flux:field.input name="additionalClass" />
+				</flux:form.object>
+			</flux:form.section>
+		</flux:form.sheet>
+
+		<flux:grid>
+			<flux:grid.row>
+				<f:for each="{columns}" as="sectionObject" iteration="iteration">
+
+					<f:for each="{sectionObject}" as="object" key="objectType"  >
+						<v:variable.set name="width" value="{object.class -> v:format.substring(start: 7)}" />
+						<v:variable.set name="percent" value="{width  -> v:math.division(b: numberOfColumns) -> v:math.product(b: 100) -> v:math.round(decimals: 2)}" />
+						<flux:grid.column name="content_{object.id}" label="{percent}%" style="width: {percent}%">
+						
+						</flux:grid.column>
+					</f:for>
+				</f:for>
+			</flux:grid.row>
+		</flux:grid>
+	</flux:form>
+</f:section>
+
+
+<f:section name="Preview">
+	
+</f:section>
+
+
+<f:section name="Main">
+	<div class="row{f:if(condition: settings.fluid, then: '-fluid')}">
+		<f:for each="{columns}" as="sectionObject" iteration="iteration">
+			<f:for each="{sectionObject}" as="object" key="objectType"  >
+				<div class="{object.class}">
+					<flux:content.render area="content_{object.id}" />
+				</div>
+			</f:for>
+		</f:for>
+	</div>
+</f:section>
+
+
+
+<f:section name="Value">col-md-{iteration.cycle}{f:if(condition: iteration.isLast, else: ',')}</f:section>
+
+</div>

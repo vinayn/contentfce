@@ -1,0 +1,62 @@
+{namespace vh=Contentfce\ViewHelpers}
+<f:layout name="Backend" />
+
+
+	
+
+<f:section name="content">
+
+
+	<div class="ditaexport_module_search">
+	<div class="ditaexport_module_search_inner">
+		<f:form action="index" name="filter" id="ditaexport_module_search">
+						<div class="ditaexport_module_search_field searchall searchall_mails">
+
+
+							<f:flashMessages renderMode="div" />
+							
+							<div class="form-group" >
+								<span class="col-sm-4 control-label form-group">
+									
+									Generate dita file for the selected page and its first level subpages 
+								</span>
+							</div>
+							<div class="searchall_submit col-sm-offset-4 col-sm-8">
+							<f:form.submit
+									value="{f:translate(key: 'BackendDitaexportbutton')}"
+									 name="ditaexport_submit" />
+							</div>
+
+						</div>
+
+			<f:comment>
+				Action for dispatcher
+			</f:comment>
+			<f:form.hidden name="forwardToAction" value="list" id="forwardToAction" />
+
+			<f:comment>
+				Keep Sorting on filter or export
+			</f:comment>
+			<div class="hiddenvalues">
+				<f:if condition="{piVars.sorting}">
+					<f:then>
+						<f:for each="{piVars.sorting}" key="sortingKey" as="order">
+							<f:form.hidden
+									name="sorting[{sortingKey}]"
+									class="extended_export_sorting_container"
+									value="{order}" />
+						</f:for>
+					</f:then>
+					<f:else>
+						<f:form.hidden
+								name="sorting[{settings.sortby}]"
+								class="extended_export_sorting_container"
+								value="{settings.order}" />
+					</f:else>
+				</f:if>
+			</div>
+		</f:form>
+	</div>
+</div>
+
+</f:section>

@@ -1,0 +1,69 @@
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+<f:layout name="Content" />
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+<f:section name="Configuration">
+	<flux:form wizardTab="Dita content element" id="accordion" icon="{f:uri.resource(path: 'Icons/icon-accordion.gif')}">
+		<flux:form.sheet name="panels">
+			<flux:form.section name="panels">
+				<flux:form.object name="panel">
+					<flux:field.input name="title" label="title" />
+					<flux:field.checkbox name="active" label="active" />
+				</flux:form.object>
+			</flux:form.section>
+		</flux:form.sheet>
+		<flux:grid>
+			<f:for each="{panels}" as="sectionObject" iteration="iteration">
+				<f:for each="{sectionObject}" as="object" key="objectType"  >
+					<flux:grid.row>
+						<flux:grid.column name="content_{object.id}" label="{f:if(condition: panel.title, then: panel.title, else: 'Content, panel {iteration.cycle}')}"  >
+						</flux:grid.column>
+					</flux:grid.row>
+				</f:for>	
+			</f:for>
+		</flux:grid>
+	</flux:form>
+</f:section>
+
+<f:section name="Preview">
+	
+</f:section>
+
+<f:section name="Main">
+
+	<v:variable.set name="activeTabIndex" value="0" />
+	<f:for each="{panels}" as="sectionObject" iteration="iteration">
+		<f:for each="{sectionObject}" as="object" key="objectType"  >
+			<f:if condition="{object.active}"><v:variable.set name="activeTabIndex" value="{iteration.index}" /></f:if>
+		</f:for>
+	</f:for>
+
+	<div class="panel-group" id="accordion-{record.uid}">
+		<f:for each="{panels}" as="sectionObject" iteration="iteration">
+			<f:for each="{sectionObject}" as="object" key="objectType"  >
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-{record.uid}"
+							   href="#panel-{record.uid}-{iteration.index}">
+								{object.title}
+							</a>
+						</h4>
+					</div>
+					<div id="panel-{record.uid}-{iteration.index}" class="panel-collapse collapse {f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'in')}">
+						<div class="panel-body">
+							<flux:content.render area="content_{object.id}" />
+						</div>
+					</div>
+				</div>
+			</f:for>
+		</f:for>
+	</div>
+
+</f:section>
+
+</div>

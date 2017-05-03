@@ -1,0 +1,12 @@
+plugin.tx_contentfce.view {
+	templateRootPaths.default = EXT:contentfce/Resources/Private/Templates/
+	partialRootPaths.default = EXT:contentfce/Resources/Private/Partials/
+	layoutRootPaths.default = EXT:contentfce/Resources/Private/Layouts/
+	
+}
+
+plugin.tx_contentfce.settings{
+	gridColumns = 12
+}
+
+

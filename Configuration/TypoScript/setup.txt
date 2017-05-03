@@ -1,0 +1,56 @@
+plugin.tx_contentfce {
+	view {
+		templateRootPaths.0 = {$plugin.tx_contentfce.view.templateRootPaths.default}
+		partialRootPaths.0 = {$plugin.tx_contentfce.view.partialRootPaths.default}
+		layoutRootPaths.0 = {$plugin.tx_contentfce.view.layoutRootPaths.default}
+	}
+	
+}
+
+plugin.tx_contentfce.settings {
+	gridColumns = {$plugin.tx_contentfce.settings.gridColumns}
+
+	userinput = TEXT
+	userinput {
+		         stdWrap.wrap = <b>|</b>
+
+	}
+	uicontrol = TEXT
+	uicontrol {
+		         stdWrap.wrap = <b>|</b>
+
+	}
+	codeblock = TEXT
+	codeblock {
+		         stdWrap.wrap =  <pre><code>| </code></pre>
+
+	}
+	codeph = TEXT
+	codeph {
+		         stdWrap.wrap = <code>|</code>
+
+	}
+	systemoutput = TEXT
+	systemoutput {
+		         stdWrap.wrap = <b>|</b>
+
+	}
+
+
+
+}
+
+
+
+
+
+
+page.includeJS {
+  file2050 = EXT:contentfce/Resources/Public/highlight/highlight.pack.min.js
+} 
+page.includeCSS {
+  file2050 = EXT:contentfce/Resources/Public/highlight/styles/default.css
+} 
+
+
+

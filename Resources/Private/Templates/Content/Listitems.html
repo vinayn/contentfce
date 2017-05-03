@@ -1,0 +1,248 @@
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+<f:layout name="Content" />
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+<f:section name="Configuration">
+	<flux:form wizardTab="Dita content element" id="listitems" icon="{v:extension.path.resources(path: 'Icons/icon-navigationlist.gif')}">
+
+
+	  <flux:form.sheet name="items">
+		<flux:form.section name="items">
+
+
+
+				
+			
+				<flux:form.object name="addtext">
+			
+					<flux:field.text name="addtext" label="">
+					</flux:field.text>
+				</flux:form.object>
+
+
+				<flux:form.object name="addlist">
+			
+					<flux:field.text name="addlist" label="">
+					</flux:field.text>
+				</flux:form.object>
+
+
+				<flux:form.object name="userinput">
+			
+					<flux:field.input name="userinput" label="" />
+				</flux:form.object>
+
+				<flux:form.object name="uicontrol">
+			
+					<flux:field.input name="uicontrol" label="" />
+				</flux:form.object>
+
+				<flux:form.object name="codeblock">
+			
+					<flux:field.text name="codeblock" label="">
+					</flux:field.text>
+				</flux:form.object>
+				<flux:form.object name="codeph">
+			
+					<flux:field.input name="codeph" label="" />
+				</flux:form.object>
+
+				<flux:form.object name="systemoutput">
+			
+					<flux:field.input name="systemoutput" label="" />
+				</flux:form.object>
+
+
+				<flux:form.object name="image">
+			
+					<flux:field.input name="image" eval="trim" label="">
+						<flux:wizard.link />
+					</flux:field.input>
+					<flux:field.input name="imagealt" label="" />
+
+
+				</flux:form.object>
+
+				<flux:form.object name="screen">
+			
+					<flux:field.input name="screen"  />
+				</flux:form.object>
+
+				<flux:form.object name="ditacontent">
+					<flux:field.input name="ditacontenttitle" label="" />
+
+				</flux:form.object>
+
+
+
+
+
+			</flux:form.section>
+		</flux:form.sheet>
+
+
+
+<flux:grid>
+	<flux:grid.row>
+		
+				
+
+		<f:for each="{items}" as="itemSectionObjects">
+			<f:for each="{itemSectionObjects}" as="object" key="objectType" iteration="iteration">
+				<v:switch value="{objectType}">
+						<v:case case="addtext" break="TRUE">
+							{object.addtext}
+						</v:case>
+						<v:case case="userinput" break="TRUE">
+							{object.userinput}
+						</v:case>
+						<v:case case="uicontrol" break="TRUE">
+							{object.uicontrol}
+						</v:case>
+						<v:case case="codeblock" break="TRUE">
+							{object.codeblock}
+						</v:case>
+						<v:case case="codeph" break="TRUE">
+							{object.codeph}
+						</v:case>
+						<v:case case="systemoutput" break="TRUE">
+							{object.systemoutput}
+						</v:case>
+						<v:case case="image" break="TRUE">
+													
+						</v:case>
+						<v:case case="ditacontent" break="TRUE" > 
+
+							<flux:grid>
+								<flux:grid.row>
+									<flux:grid.column name="ditacontenttitle_{object.id}" label="{object.ditacontenttitle}" />
+
+								</flux:grid.row>
+
+								</flux:grid>
+
+
+						</v:case>
+						<v:case case="default">
+
+							{object.text}
+
+						</v:case>
+				</v:switch>
+			</f:for>
+		</f:for>
+
+
+
+		</flux:grid.row>
+
+		</flux:grid>
+
+
+
+
+
+
+	</flux:form>
+</f:section>
+
+<f:section name="Preview">
+
+
+			
+	
+</f:section>
+
+<f:section name="Main">
+
+
+
+
+
+
+
+	<div class="{class} {f:if(condition: addWell, then: 'well')}" style="{f:if(condition: zeroPadding, then: 'padding: 8px 0px 8px 0px;')}">
+		<ul class="">
+			<li>
+			<f:for each="{items}" as="itemSectionObjects">
+				
+				
+
+				<f:for each="{itemSectionObjects}" as="object" key="objectType">
+					
+					<v:switch value="{objectType}">
+						<v:case case="addtext" break="TRUE">
+							{object.addtext}
+						</v:case>
+						<v:case case="userinput" break="TRUE">
+
+
+							<v:variable.set name="userinputSettings" value="{v:variable.typoscript(path: 'plugin.tx_contentfce.settings.userinput.stdWrap')}" />
+							<v:variable.set name="wrap" value="{userinputSettings.wrap -> v:iterator.explode(glue: '|')}" />
+
+							<f:format.raw>{wrap.0}</f:format.raw>{object.userinput}<f:format.raw>{wrap.1}</f:format.raw>					
+
+						</v:case>
+						<v:case case="uicontrol" break="TRUE">
+							<v:variable.set name="uicontrolSettings" value="{v:variable.typoscript(path: 'plugin.tx_contentfce.settings.uicontrol.stdWrap')}" />
+							<v:variable.set name="wrap" value="{uicontrolSettings.wrap -> v:iterator.explode(glue: '|')}" />
+
+							<f:format.raw>{wrap.0}</f:format.raw>{object.uicontrol}<f:format.raw>{wrap.1}</f:format.raw>
+							
+						</v:case>
+						<v:case case="codeblock" break="TRUE">
+							<v:variable.set name="codeblockSettings" value="{v:variable.typoscript(path: 'plugin.tx_contentfce.settings.codeblock.stdWrap')}" />
+							<v:variable.set name="wrap" value="{codeblockSettings.wrap -> v:iterator.explode(glue: '|')}" />
+
+							<f:format.raw>{wrap.0}</f:format.raw>{object.codeblock}<f:format.raw>{wrap.1}</f:format.raw>
+
+							
+						</v:case>
+						<v:case case="codeph" break="TRUE">
+
+							<v:variable.set name="codephSettings" value="{v:variable.typoscript(path: 'plugin.tx_contentfce.settings.codeph.stdWrap')}" />
+							<v:variable.set name="wrap" value="{codephSettings.wrap -> v:iterator.explode(glue: '|')}" />
+
+							<f:format.raw>{wrap.0}</f:format.raw>{object.codeph}<f:format.raw>{wrap.1}</f:format.raw>
+							
+						</v:case>
+						<v:case case="systemoutput" break="TRUE">
+
+							<v:variable.set name="systemoutputSettings" value="{v:variable.typoscript(path: 'plugin.tx_contentfce.settings.systemoutput.stdWrap')}" />
+							<v:variable.set name="wrap" value="{systemoutputSettings.wrap -> v:iterator.explode(glue: '|')}" />
+
+							<f:format.raw>{wrap.0}</f:format.raw>{object.systemoutput}<f:format.raw>{wrap.1}</f:format.raw>
+							
+						</v:case>
+						<v:case case="image" break="TRUE">
+							<f:image src="{object.image}" treatIdAsReference="1"  alt="{object.imagealt}" />						
+						</v:case>
+						<v:case case="ditacontent" break="TRUE">
+							<flux:content.render area="ditacontenttitle_{object.id}" />						
+						</v:case>
+
+						<v:case case="addlist" break="TRUE">
+							</li><li>
+							{object.addtext}						
+						</v:case>
+
+
+
+						<v:case case="default">
+
+							{object.text}
+
+						</v:case>
+					</v:switch>
+				</f:for>
+			</f:for>
+		</li>
+		</ul>
+	</div>
+</f:section>
+
+</div>

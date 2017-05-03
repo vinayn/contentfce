@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" product-name="contentfce" date="2015-04-07T09:28:15+02:00">
+		<header/>
+		<body>
+			<trans-unit id="flux.fluidcontent">
+				<source>Fluid content element example</source>
+			</trans-unit>
+			<trans-unit id="flux.fluidcontent.description">
+				<source>Description can be entered in LLL file locallang.xlf of extension contentfce</source>
+			</trans-unit>
+			<trans-unit id="flux.fluidpage">
+				<source>Standard fluid page</source>
+			</trans-unit>
+			<trans-unit id="flux.fluidpage.description">
+				<source>Description can be entered in LLL file locallang.xlf of extension contentfce</source>
+			</trans-unit>
+			
+			
+						<trans-unit id="flux.accordion" >
+				<source>Dita content : Accordion with content elements</source>
+			</trans-unit>
+			<trans-unit id="flux.accordion" >
+				<source>Dita content:Accordion element container</source>
+			</trans-unit>
+	
+			
+			<trans-unit id="flux.accordion.columns.column" >
+				<source>Dita content: Accordion with content elements</source>
+			</trans-unit>
+			<trans-unit id="flux.accordion.columns.column.description" >
+				<source>Accordion element container</source>
+			</trans-unit>
+	
+	
+						<trans-unit id="flux.accordion.sheets.panels" xml:space="preserve">
+				<source>Panels</source>
+			</trans-unit>
+			<trans-unit id="flux.accordion.sections.panels" xml:space="preserve">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="flux.accordion.objects.panel" xml:space="preserve">
+				<source>Panel</source>
+			</trans-unit>
+			<trans-unit id="flux.accordion.objects.panel.title" xml:space="preserve">
+				<source>Panel header/title</source>
+			</trans-unit>
+			<trans-unit id="flux.accordion.objects.panel.active" xml:space="preserve">
+				<source>Panel is active?</source>
+			</trans-unit>
+	
+	
+	
+				<trans-unit id="flux.alert" xml:space="preserve">
+				<source>Dita content: Alert (inline)</source>
+			</trans-unit>
+			<trans-unit id="flux.alert.description" xml:space="preserve">
+				<source>Alert box (not popup) inline in page</source>
+			</trans-unit>
+			
+				<trans-unit id="flux.alert.fields.header" xml:space="preserve">
+				<source>Alert header</source>
+			</trans-unit>
+			<trans-unit id="flux.alert.fields.closeLinkText" xml:space="preserve">
+				<source>Close link text (for example: a single x or &amp;times;)</source>
+			</trans-unit>
+			<trans-unit id="flux.alert.fields.class" xml:space="preserve">
+				<source>Alert box class</source>
+			</trans-unit>
+			<trans-unit id="flux.alert.fields.isBlock" xml:space="preserve">
+				<source>Add additional padding</source>
+			</trans-unit>
+			
+						<trans-unit id="flux.alert" xml:space="preserve">
+				<source>Dita content: Alert (inline)</source>
+			</trans-unit>
+			<trans-unit id="flux.alert.description" xml:space="preserve">
+				<source>Alert box (not popup) inline in page</source>
+			</trans-unit>
+	
+	
+				<trans-unit id="flux.tabs" xml:space="preserve">
+				<source>Dita content: Tabs/pills with content elements</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.description" xml:space="preserve">
+				<source>Places child content elements in tabs.</source>
+			</trans-unit>
+	
+			<trans-unit id="flux.tabs.sheets.display" xml:space="preserve">
+				<source>Display</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.fields.mode" xml:space="preserve">
+				<source>Display mode</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.fields.stackable" xml:space="preserve">
+				<source>Make stackable tabs/pills</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.fields.position" xml:space="preserve">
+				<source>Positioning</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.sheets.tabs" xml:space="preserve">
+				<source>Tabs</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.sections.tabs" xml:space="preserve">
+				<source>Tabs</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.objects.tab" xml:space="preserve">
+				<source>Tab</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.objects.tab.title" xml:space="preserve">
+				<source>Tab title</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.objects.tab.class" xml:space="preserve">
+				<source>Additional CSS class names</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.objects.tab.active" xml:space="preserve">
+				<source>Active?</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.objects.tab.fade" xml:space="preserve">
+				<source>Enable fading effect</source>
+			</trans-unit>
+			
+			
+			
+			
+			
+			
+						<trans-unit id="flux.navigationlist" xml:space="preserve">
+				<source>Dita content: Navigation List</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.description" xml:space="preserve">
+				<source>Configurable navigation list of links to various resources.</source>
+			</trans-unit>
+			
+			
+						<trans-unit id="flux.navigationlist.sheets.display" xml:space="preserve">
+				<source>Display</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.fields.addWell" xml:space="preserve">
+				<source>Add well wrapper</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.fields.zeroPadding" xml:space="preserve">
+				<source>Do not pad the wrapper</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.fields.class" xml:space="preserve">
+				<source>Additional class names for wrapper element</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.sheets.items" xml:space="preserve">
+				<source>Items</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.sections.items" xml:space="preserve">
+				<source>Items</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.objects.header" xml:space="preserve">
+				<source>Header</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.objects.header.text" xml:space="preserve">
+				<source>Header text</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.objects.header.class" xml:space="preserve">
+				<source>Additional CSS class names</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.objects.item" xml:space="preserve">
+				<source>List Item</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.objects.item.text" xml:space="preserve">
+				<source>Item label text</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.objects.item.tooltip" xml:space="preserve">
+				<source>Optional tooltip text</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.objects.item.icon" xml:space="preserve">
+				<source>Optional icon (16x16)</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.objects.item.target" xml:space="preserve">
+				<source>Target</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.objects.item.class" xml:space="preserve">
+				<source>Additional CSS class names</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.objects.divider" xml:space="preserve">
+				<source>Divider</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.objects.divider.class" xml:space="preserve">
+				<source>Additional CSS class names</source>
+			</trans-unit>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<trans-unit id="flux.row.sheets.rowconfiguration" xml:space="preserve">
+				<source>Configure Row</source>
+			</trans-unit>
+			<trans-unit id="flux.row.sheets.display" xml:space="preserve">
+				<source>Configure Column</source>
+			</trans-unit>
+			<trans-unit id="flux.row" xml:space="preserve">
+				<source>Dita content: Column Row</source>
+			</trans-unit>
+			<trans-unit id="flux.row.description" xml:space="preserve">
+				<source>Adds a wrapper element that lets you define columns of varying widths</source>
+			</trans-unit>
+			
+			<trans-unit id="flux.row.fields.settings.fluid" xml:space="preserve">
+				<source>Use "fluid" row type instead of standard row</source>
+			</trans-unit>
+			<trans-unit id="flux.row.sections.columns" xml:space="preserve">
+				<source>Columns</source>
+			</trans-unit>
+			<trans-unit id="flux.row.objects.column" xml:space="preserve">
+				<source>Add New Column</source>
+			</trans-unit>
+			<trans-unit id="flux.row.objects.column.addWell" xml:space="preserve">
+				<source>Add 'Well' inside cell</source>
+			</trans-unit>
+			<trans-unit id="flux.row.objects.column.class" xml:space="preserve">
+				<source>Class</source>
+			</trans-unit>
+			<trans-unit id="flux.row.objects.column.additionalClass" xml:space="preserve">
+				<source>Additional CSS class names</source>
+			</trans-unit>
+			
+			<trans-unit id="flux.buttonlink" xml:space="preserve">
+				<source>Dita content: Button Link</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.description" xml:space="preserve">
+				<source>Default Twitter Bootstrap button-styled link to a page, file or custom URL.</source>
+			</trans-unit>
+			
+			
+			
+			
+				<trans-unit id="flux.buttonlink.fields.target" xml:space="preserve">
+				<source>Link target</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.text" xml:space="preserve">
+				<source>Link text</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.tooltip" xml:space="preserve">
+				<source>Display title as tooltip</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.title" xml:space="preserve">
+				<source>Optional title, appears as tooltip if tooltip is enabled</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.iconClass" xml:space="preserve">
+				<source>Optional icon class name, example 'envelope' or 'exclamation-sign'</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.iconPlacement" xml:space="preserve">
+				<source>Icon placement - left or right</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.size" xml:space="preserve">
+				<source>LinkButton size</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.block" xml:space="preserve">
+				<source>Display button as block element (100% width)</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.class" xml:space="preserve">
+				<source>LinkButton style type</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.additionalClassNames" xml:space="preserve">
+				<source>Additional class names for LinkButton element</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.wrapTag" xml:space="preserve">
+				<source>Wrap with tag</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.sheets.addons" xml:space="preserve">
+				<source>Addons</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.sections.addons" xml:space="preserve">
+				<source>Addons</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.objects.popover" xml:space="preserve">
+				<source>Popover dialog</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.objects.popover.title" xml:space="preserve">
+				<source>Popover title</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.objects.popover.content" xml:space="preserve">
+				<source>Popover content</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.objects.modal" xml:space="preserve">
+				<source>Modal dialog</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.objects.modal.title" xml:space="preserve">
+				<source>Modal dialog title</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.objects.modal.content" xml:space="preserve">
+				<source>Content elements to be displayed</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.edit" xml:space="preserve">
+				<source>Edit</source>
+			</trans-unit>
+
+
+
+
+			<trans-unit id="flux.paragraph" xml:space="preserve">
+				<source>Dita content: Paragraph</source>
+			</trans-unit>
+			<trans-unit id="flux.paragraph.description" xml:space="preserve">
+				<source>Add block paragraph.</source>
+			</trans-unit>
+			<trans-unit id="flux.paragraph.sheets.items" xml:space="preserve">
+				<source>Block - Paragraph</source>
+			</trans-unit>
+			<trans-unit id="flux.paragraph.objects.startparagraphp" xml:space="preserve">
+				<source>Start paragraph</source>
+			</trans-unit>
+			<trans-unit id="flux.paragraph.objects.startparagraphp.startparagraphp" xml:space="preserve">
+				<source>Start paragraph</source>
+			</trans-unit>
+
+
+			<trans-unit id="flux.paragraph.objects.continueparagraphp" xml:space="preserve">
+				<source>Continue paragraph</source>
+			</trans-unit>
+			<trans-unit id="flux.paragraph.objects.continueparagraphp.continueparagraphp" xml:space="preserve">
+				<source>Continue paragraph data</source>
+			</trans-unit>
+
+			<trans-unit id="flux.paragraph.fields.continueparagraphp" xml:space="preserve">
+				<source>Continue paragraph</source>
+			</trans-unit>
+
+
+			<trans-unit id="flux.paragraph.objects.userinput" xml:space="preserve">
+				<source>Add userinput</source>
+			</trans-unit>
+			<trans-unit id="flux.paragraph.objects.userinput.userinput" xml:space="preserve">
+				<source>Enter User input data</source>
+			</trans-unit>
+
+			<trans-unit id="flux.paragraph.objects.systemoutput" xml:space="preserve">
+				<source>Add Systemoutput</source>
+			</trans-unit>
+			<trans-unit id="flux.paragraph.objects.systemoutput.systemoutput" xml:space="preserve">
+				<source>Enter SystemOutput data</source>
+			</trans-unit>
+
+			<trans-unit id="flux.paragraph.objects.image" xml:space="preserve">
+				<source>Add image</source>
+			</trans-unit>
+			<trans-unit id="flux.paragraph.objects.image.image" xml:space="preserve">
+				<source>Add image</source>
+			</trans-unit>
+			<trans-unit id="flux.paragraph.objects.image.imagealt" xml:space="preserve">
+				<source>Atlernate text for image</source>
+			</trans-unit>
+
+			<trans-unit id="flux.paragraph.objects.uicontrol" xml:space="preserve">
+				<source>Add uicontrol</source>
+			</trans-unit>
+			<trans-unit id="flux.paragraph.objects.uicontrol.uicontrol" xml:space="preserve">
+				<source>Enter uicontrol data</source>
+			</trans-unit>
+
+			<trans-unit id="flux.paragraph.objects.codeblock" xml:space="preserve">
+				<source>Add codeblock</source>
+			</trans-unit>
+			<trans-unit id="flux.paragraph.objects.codeblock.codeblock" xml:space="preserve">
+				<source>Enter codeblock data</source>
+			</trans-unit>
+
+			<trans-unit id="flux.paragraph.objects.codeph" xml:space="preserve">
+				<source>Add codeph</source>
+			</trans-unit>
+			<trans-unit id="flux.paragraph.objects.codeph.codeph" xml:space="preserve">
+				<source>Enter codeph data</source>
+			</trans-unit>
+
+			<trans-unit id="flux.paragraph.objects.addtext" xml:space="preserve">
+				<source>Add text</source>
+			</trans-unit>
+			<trans-unit id="flux.paragraph.objects.addtext.addtext" xml:space="preserve">
+				<source>Enter text</source>
+			</trans-unit>
+
+
+
+
+
+			<trans-unit id="flux.listitems" xml:space="preserve">
+				<source>Dita content: List</source>
+			</trans-unit>
+			<trans-unit id="flux.listitems.description" xml:space="preserve">
+				<source>Dita content: ordered/unordered list (ul/ol)</source>
+			</trans-unit>
+			<trans-unit id="flux.listitems.sheets.items" xml:space="preserve">
+				<source>List</source>
+			</trans-unit>
+
+			<trans-unit id="flux.listitems.objects.addlist" xml:space="preserve">
+				<source>Add List</source>
+			</trans-unit>
+
+
+			<trans-unit id="flux.listitems.objects.userinput" xml:space="preserve">
+				<source>Add userinput</source>
+			</trans-unit>
+			<trans-unit id="flux.listitems.objects.userinput.userinput" xml:space="preserve">
+				<source>Enter User input data</source>
+			</trans-unit>
+
+			<trans-unit id="flux.listitems.objects.systemoutput" xml:space="preserve">
+				<source>Add Systemoutput</source>
+			</trans-unit>
+			<trans-unit id="flux.listitems.objects.systemoutput.systemoutput" xml:space="preserve">
+				<source>Enter SystemOutput data</source>
+			</trans-unit>
+
+			<trans-unit id="flux.listitems.objects.screen" xml:space="preserve">
+				<source>Add Screen content</source>
+			</trans-unit>
+			<trans-unit id="flux.listitems.objects.screen.screen" xml:space="preserve">
+				<source>Add Screen content</source>
+			</trans-unit>
+
+
+			<trans-unit id="flux.listitems.objects.image" xml:space="preserve">
+				<source>Add image</source>
+			</trans-unit>
+			<trans-unit id="flux.listitems.objects.image.image" xml:space="preserve">
+				<source>Add image</source>
+			</trans-unit>
+			<trans-unit id="flux.listitems.objects.image.imagealt" xml:space="preserve">
+				<source>Atlernate text for image</source>
+			</trans-unit>
+
+			<trans-unit id="flux.listitems.objects.uicontrol" xml:space="preserve">
+				<source>Add uicontrol</source>
+			</trans-unit>
+			<trans-unit id="flux.listitems.objects.uicontrol.uicontrol" xml:space="preserve">
+				<source>Enter uicontrol data</source>
+			</trans-unit>
+
+			<trans-unit id="flux.listitems.objects.codeblock" xml:space="preserve">
+				<source>Add codeblock</source>
+			</trans-unit>
+			<trans-unit id="flux.listitems.objects.codeblock.codeblock" xml:space="preserve">
+				<source>Enter codeblock data</source>
+			</trans-unit>
+
+			<trans-unit id="flux.listitems.objects.codeph" xml:space="preserve">
+				<source>Add codeph</source>
+			</trans-unit>
+			<trans-unit id="flux.listitems.objects.codeph.codeph" xml:space="preserve">
+				<source>Enter codeph data</source>
+			</trans-unit>
+
+			<trans-unit id="flux.listitems.objects.addtext" xml:space="preserve">
+				<source>Add text</source>
+			</trans-unit>
+			<trans-unit id="flux.listitems.objects.addtext.addtext" xml:space="preserve">
+				<source>Enter text</source>
+			</trans-unit>
+
+			<trans-unit id="flux.listitems.objects.ditacontent" xml:space="preserve">
+				<source>Add Dita Content</source>
+			</trans-unit>
+			<trans-unit id="flux.listitems.objects.ditacontent.ditacontenttitle" xml:space="preserve">
+				<source>Dita Content title</source>
+			</trans-unit>
+
+
+
+
+			
+			<trans-unit id="flux.TableFlex.objects.item" xml:space="preserve">
+				<source>Add Row</source>
+			</trans-unit>
+
+			
+			<trans-unit id="BackendDitaexportbutton">
+				<source>Reduce to one form:</source>
+			</trans-unit>
+			<trans-unit id="BackendDitaexportbutton">
+				<source>Generate Dita</source>
+			</trans-unit>
+	
+
+		</body>
+	</file>
+</xliff>

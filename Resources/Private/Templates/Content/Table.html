@@ -1,0 +1,203 @@
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+<f:layout name="Content" />
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+    <f:section name="Configuration">
+        <flux:form id="TableFlex"
+                   options="{group: 'Dita content element', Fluidcontent: {sorting: 10}, icon: '{f:uri.resource(path: \'Icons/icon-row.gif\')}'}"
+                   label="Dita content:Create Table" description="Create table upto 12 Columns with advanced Column Settings">
+            <flux:form.sheet name="TableSheet" label="Column Configuration">
+
+                <flux:field.select name="ColCount" items="{
+                    0:{0:'Select Column count',1:'2'},
+                    1:{0:'1 Columns',1:'1'},
+                    2:{0:'2 Columns',1:'2'},
+                    3:{0:'3 Columns',1:'3'},
+                    4:{0:'4 Columns',1:'4'},
+                    5:{0:'5 Columns',1:'5'}
+                    6:{0:'6 Columns',1:'6'}
+                    7:{0:'7 Columns',1:'7'}
+                    8:{0:'8 Columns',1:'8'}
+                    9:{0:'9 Columns',1:'9'}
+                    10:{0:'10 Columns',1:'10'}
+                    11:{0:'11 Columns',1:'11'}
+                    12:{0:'12 Columns',1:'12'}
+                }" label="Number of Columns " requestUpdate="true" maxItems="1" size="1" required="TRUE" />
+                
+                    <flux:field.select name="MarginTop" items="{
+                            0:{0:'Select margin top'},
+				            1:{0:'10px',1:'mg10'},
+				            2:{0:'15px',1:'mg15'},
+				            3:{0:'20px',1:'mg20'},
+				            4:{0:'25px',1:'mg25'},
+				            5:{0:'30px',1:'mg30'},
+				            6:{0:'40px',1:'mg40'},
+				            7:{0:'50px',1:'mg50'}
+				        }" default="0" label="Margin Top" />
+                    <flux:field.select name="MarginBottom" items="{
+                            0:{0:'Select margin bottom'},
+				            1:{0:'10px',1:'mg10'},
+				            2:{0:'15px',1:'mg15'},
+				            3:{0:'20px',1:'mg20'},
+				            4:{0:'25px',1:'mg25'},
+				            5:{0:'30px',1:'mg30'},
+				            6:{0:'40px',1:'mg40'},
+				            7:{0:'50px',1:'mg50'}
+				        }" default="0" label="Margin Bottom" />
+               
+                <f:if condition="{ColCount} > '0'">
+                    <f:then>
+                        
+                            <v:iterator.for from="1" to="{ColCount}" iteration="i" step="1">
+							
+	
+
+								<flux:field.input name="tableheader{i.index}" label="Column {i.index} header" />					
+								<flux:field.input name="colwidth{i.index}" label="Column {i.index} width" />
+								<flux:field.input name="addCssClassCol{i.index}" label="Additional CSS Class Column {i.index}"/>
+							
+                            </v:iterator.for>
+                        
+                    </f:then>
+                </f:if>
+				
+				
+				
+				
+				
+				
+				 <f:if condition="{ColCount} > '0'">
+                <f:then>
+                    <v:iterator.for from="1" to="{ColCount}" iteration="i" step="1">                      
+
+                    </v:iterator.for>
+                </f:then>
+            </f:if>
+				
+            </flux:form.sheet>
+			
+			
+			
+
+                  
+			
+			
+			
+			
+		<flux:form.sheet name="items" label="Rows">
+			<flux:form.section name="items">
+
+				<flux:form.object name="item">
+
+				
+				
+				 <f:if condition="{ColCount} > '0'">
+                <f:then>
+                    <v:iterator.for from="1" to="{ColCount}" iteration="i" step="1">                      
+                           
+                                <flux:field.input name="addCssClassEachColxs{i.index}" label="Column {i.index} class" />
+				
+                
+                            
+
+                    </v:iterator.for>
+                </f:then>
+            </f:if>
+				
+				
+			</flux:form.object>
+			</flux:form.section>
+		</flux:form.sheet>
+			
+	 
+            <flux:grid>
+               
+
+				<f:if condition="{items}">
+		<f:for each="{items}" as="itemSectionObjects">
+			<f:for each="{itemSectionObjects}" as="object" key="objectType" iteration="iteration">
+					<flux:grid.row>
+						<f:if condition="{ColCount} > '0'">
+							<f:then>
+								<v:iterator.for from="1" to="{ColCount}" iteration="i" step="1">
+								<v:variable.set name="tableheadervalue" value="{v:variable.get(name: 'tableheader{i.index}')}" />
+								
+									<flux:grid.column
+											style="width:{v:math.division(a: 100, b: ColCount) -> v:math.round(decimals: 12)}%;"
+											name="column{iteration.index}{i.index}_{object.id}"
+											label="Col {iteration.index}{i.index}" />
+									
+								</v:iterator.for>
+							</f:then>
+						</f:if>
+					</flux:grid.row>
+			</f:for>
+		</f:for>
+				</f:if>	
+							
+	
+				
+                
+            </flux:grid>
+			
+			
+        </flux:form>
+    </f:section>
+
+    <f:section name="Preview">
+	
+	<script type="text/javascript">
+	
+	
+TYPO3.jQuery( document ).ready(function() { TYPO3.jQuery('#element-tt_content-{record.uid} .grid-visibility-toggle').prop('class','table-responsive'); }); </script>
+	
+	<flux:widget.grid />
+			
+    </f:section>
+
+    <f:section name="Main">
+        <div class="table-responsive">
+		
+			<table class="table table-bordered" >
+				<thead>
+					<v:iterator.for from="1" to="{ColCount}" iteration="i" step="1">
+					<v:variable.set name="addCssClassColvalue" value="{v:variable.get(name: 'addCssClassCol{i.index}')}" />
+					<v:variable.set name="tableheadervalue" value="{v:variable.get(name: 'tableheader{i.index}')}" />
+					<th class="table-header-dita   {addCssClassColvalue}">    {tableheadervalue} </th>
+					</v:iterator.for>
+				</thead>
+				<tbody>
+				
+				<f:if condition="{items}">
+				
+				<f:for each="{items}" as="itemSectionObjects">
+					<f:for each="{itemSectionObjects}" as="object" key="objectType" iteration="iteration">
+						<tr>
+							<f:if condition="{ColCount} > '0'">
+								<f:then>
+									<v:iterator.for from="1" to="{ColCount}" iteration="i" step="1">
+									
+					<v:variable.set name="addCssClassColvalueEachcol" value="{v:variable.get(name: 'addCssClassEachColxs{iteration.index}{i.index}')}" />
+									
+										<td class="{addCssClassColvalueEachcol}">
+										<flux:content.render area="column{iteration.index}{i.index}_{object.id}" />
+										</td>
+									</v:iterator.for>
+								</f:then>
+							</f:if>
+						</tr>
+				</f:for>
+					</f:for>
+				</f:if>	
+				
+				</tbody>
+
+			</table>
+        </div>
+    </f:section>
+
+</div>
